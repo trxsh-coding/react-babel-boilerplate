@@ -9,7 +9,9 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
@@ -19,15 +21,16 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "autofix"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "autofix", "import"],
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error"
     ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "@typescript-eslint/no-var-requires": "off",
     "react/prop-types": "off",
-    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "indent": [
